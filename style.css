@@ -55,11 +55,11 @@ h1, h2 {
   transition: all 0.2s;
 }
 .dog {
-  background-image: url(images/Dog-icon.png);
+   background-image: none; /* url(images/Dog-icon.png) */
 }
 .cat {
-  background-image: url(images/cat.png);
+  background-image: none; /* url(images/cat.png) */
 }
 .shark {
-  background-image: url(images/shark.png);
+  background-image: none; /* url(images/shark.png) */
 }
