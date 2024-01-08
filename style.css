@@ -15,6 +15,15 @@ h1, h2 {
   text-align: center;
   padding-top: 20px;
 }
+p {
+  background-color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  width:30%;
+  border-bottom: 1px solid grey;
+}
 
 .game-board {
   background-color: white;
@@ -40,6 +49,7 @@ h1, h2 {
   background-position: center; 
   background-repeat: no-repeat;
   position: relative;
+  perspective: 1000px;
 }
 .card p {
   margin: auto;
@@ -55,11 +65,16 @@ h1, h2 {
   transition: all 0.2s;
 }
 .dog {
-   background-image: none; /* url(images/Dog-icon.png) */
+   background-image:  url(images/Dog-icon.png);
 }
 .cat {
-  background-image: none; /* url(images/cat.png) */
+  background-image:  url(images/cat.png);
 }
 .shark {
-  background-image: none; /* url(images/shark.png) */
+  background-image:  url(images/shark.png);
+}
+.flip {
+  transform-style: preserve-3d; /* Maintain 3D space */
+  transition: transform 0.5s ease; /* Transition for smooth flip effect */
+  transform: rotateY(180deg); /* Rotate around Y-axis for flip effect */
 }

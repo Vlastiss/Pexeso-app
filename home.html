@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Pexeso</title>
+    <title>Pexeso - memory game</title>
   </head>
   <body>
     <div class="background">
-      <h1>Pexeso - board game</h1>
+      <h1>Pexeso - memory game</h1>
       <h2>(Find the same cards.)</h2>
       <div class="game-board">
-        <div class="card dog" id="dog"><p>card</p></div>
-        <div class="card dog" id="dog"><p>card</p></div>
-        <div class="card cat" id="cat"><p>card</p></div>
-        <div class="card cat" id="cat"><p>card</p></div>
-        <div class="card shark" id="shark"><p>card</p></div>
-        <div class="card shark" id="shark"><p>card</p></div>
+        <div class="card" onclick="gameStart(this)"></div>
+        <div class="card" onclick="gameStart(this)"></div>
+        <div class="card" onclick="gameStart(this)"></div>
+        <div class="card" onclick="gameStart(this)"></div>
+        <div class="card" onclick="gameStart(this)"></div>
+        <div class="card" onclick="gameStart(this)"></div>
       </div>
+      <p>Number of wins: <span id="wins"></span></p>
+      <p>Number of loses: <span id="loses"></span></p>
+      <p><b>Number of attempts: <span id="attempts"></span></b></p>
     </div>
     <script src="script.js"></script>
   </body>
