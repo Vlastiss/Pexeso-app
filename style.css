@@ -73,8 +73,3 @@ p {
 .shark {
   background-image:  url(images/shark.png);
 }
-.flip {
-  transform-style: preserve-3d; /* Maintain 3D space */
-  transition: transform 0.5s ease; /* Transition for smooth flip effect */
-  transform: rotateY(180deg); /* Rotate around Y-axis for flip effect */
-}
