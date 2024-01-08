@@ -19,11 +19,19 @@ function hideCards(cardId1, cardId2) {
 let numberOfWins = 0;
 let numberOfLoses = 0;
 let numberOfAttempts = 0;
+let successRate = 0;
 
 function updateStats() {
   document.getElementById('wins').textContent = numberOfWins;
   document.getElementById('loses').textContent = numberOfLoses;
   document.getElementById('attempts').textContent = numberOfAttempts;
+  document.getElementById('sucess').textContent = successRate.toFixed(0) + "%";
+}
+
+function calculateSuccessRate() {
+  if (numberOfAttempts > 0) {
+    successRate = (numberOfWins / numberOfAttempts) * 100;
+  }
 }
 
 let firstClick = null;
@@ -49,6 +57,7 @@ function gameStart(card) {
         dog1card.style.visibility = "hidden";
         dog2card.style.visibility = "hidden";
         alert("You found the match!");
+        calculateSuccessRate()
         updateStats();
 
       } else if ((firstClick === "cat1" && secondClick === "cat2") || (firstClick === "cat2" && secondClick === "cat1")) {
@@ -59,6 +68,7 @@ function gameStart(card) {
         cat1card.style.visibility = "hidden";
         cat2card.style.visibility = "hidden";
         alert("You found the match!");
+        calculateSuccessRate()
         updateStats();
 
       } else if ((firstClick === "shark1" && secondClick === "shark2") || (firstClick === "shark2" && secondClick === "shark1")) {
@@ -69,6 +79,7 @@ function gameStart(card) {
         shark1card.style.visibility = "hidden";
         shark2card.style.visibility = "hidden";
         alert("You found the match!");
+        calculateSuccessRate()
         updateStats();
 
       } else {
@@ -76,6 +87,7 @@ function gameStart(card) {
         hideCards(firstClick, secondClick);
         numberOfAttempts++;
         numberOfLoses++;
+        calculateSuccessRate()
         updateStats();
       };
 
